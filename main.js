@@ -31,7 +31,7 @@ function displayBitcoinData(res) {
                 Bitcoin Information
             </div>
             <div class="card-body">
-                <pre>Time: ${currentTime}</pre>
+                <pre>Last Refresh: ${currentTime}</pre>
                 <table class="table">
                     <thead>
                         <tr>
@@ -60,5 +60,10 @@ function displayBitcoinData(res) {
 }
 
 //Event listeners
-document.getElementById('get').addEventListener('click', getBitCoinData);
+//document.getElementById('get').addEventListener('DOMContentLoaded', getBitCoinData);
+document.addEventListener("DOMContentLoaded", function() {getBitCoinData();});
 
+var intervalId = window.setInterval(function(){
+    getBitCoinData()
+    console.log("refreshed")
+  }, 300000);
