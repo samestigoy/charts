@@ -28,7 +28,7 @@ function displayBitcoinData(res) {
     document.getElementById('dataTable').innerHTML = `
         <div class="card mt-3">
             <div class="card-header">
-                Bitcoin Information
+                Bitcoin Price Information
             </div>
             <div class="card-body">
                 <pre>Last Refresh: ${currentTime}</pre>
