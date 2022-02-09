@@ -15,11 +15,16 @@ function displayBitcoinData(res) {
     
     let resData = res.data;
 
+    //Get Time
     let currentTime = resData["time"]["updated"];
+
+    //Get Prices
     let currentUSD = resData["bpi"]["USD"]["rate"];
     let currentEUR = resData["bpi"]["EUR"]["rate"];
     let currentGBP = resData["bpi"]["GBP"]["rate"];
-    //let currentPrice = resData[""]
+    
+    //Get Disclaimer
+    let disclaimer = resData["disclaimer"];
 
     console.log(resData);
     //console.log(res.data);
@@ -31,7 +36,7 @@ function displayBitcoinData(res) {
                 Bitcoin Price Information
             </div>
             <div class="card-body">
-                <pre>Last Refresh: ${currentTime}</pre>
+                <p>Last Refresh: ${currentTime}</p>
                 <table class="table">
                     <thead>
                         <tr>
@@ -54,6 +59,7 @@ function displayBitcoinData(res) {
                         </tr>
                     </tbody>
                 </table>
+                <p>${disclaimer}</p>
             </div>
         </div>
     `;
