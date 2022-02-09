@@ -71,5 +71,5 @@ document.addEventListener("DOMContentLoaded", function() {getBitCoinData();});
 
 var intervalId = window.setInterval(function(){
     getBitCoinData()
-    console.log("refreshed")
+    console.clear();
   }, 300000);
